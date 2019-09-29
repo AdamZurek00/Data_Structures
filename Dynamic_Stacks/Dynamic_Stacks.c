@@ -34,16 +34,9 @@ int pop(Stack_Int* s, int* val){
     return 0;
 }
 
-int main(){
-    Stack_Int* s = Stack_Init();
-    printf("%d\n", isEmpty(s));
-    for(int i = 1; i <= 5; i++){
-        push(s, i);
-    }
-    int temp;
-    while(!isEmpty(s)){
-        pop(s, &temp);
-        printf("%d ", temp);
-    }
-    printf("\n");
+int top(Stack_Int* s, int* val){
+    if(isEmpty(s))
+        return 1;
+    *val = s->head->val;
 }
+
